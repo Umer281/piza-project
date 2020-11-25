@@ -19,3 +19,8 @@ class Piza(models.Model):
   in order to display them to user so that he can select properties of his choice and order piza
   
   #views.py---in this we have created function 'Order' which check if the user has made request to order pizza,if he has made we are storing that form containing post request in our database and sending him to items page where message order placed successfully gets displayed,function stored items displays the stored objects of model Piza
+#urls.py--it is in our main project where we can set routs,to order piza one has to use url://http://127.0.0.1:8000/order,loclahost/order
+    path('order/',Piza_views.order,name='order'),
+    path('items/',Piza_views.items,name='items'),
+    path('storeditems/',Piza_views.storeditems,name='storeditems'),
+    
